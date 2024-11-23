@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+// option go_package = "example.com/networkpolicy/protos"; 
+
+package protos;
+
+service Service1 {
+    rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+service Service2 {
+    rpc SayHi (HiRequest) returns (HiResponse);
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string message = 1;
+}
+
+message HiRequest {
+    string name = 1;
+}
+
+message HiResponse {
+    string message = 1;
+}
